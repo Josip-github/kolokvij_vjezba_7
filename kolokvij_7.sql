@@ -104,6 +104,9 @@ update punica set eura = '15.77';
 #U tablici sestra obrišite sve zapise čija je vrijednost kolone hlace manje od AB.
 delete from sestra where hlace < 'AB';
 
+#Izlistajte kratkamajica iz tablice ostavljen uz uvjet da vrijednost kolone introvertno nepoznate.
+select kratkamajica from ostavljen where introvertno is null;
+
 
 
 
