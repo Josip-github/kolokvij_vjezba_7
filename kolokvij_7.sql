@@ -107,6 +107,21 @@ delete from sestra where hlace < 'AB';
 #Izlistajte kratkamajica iz tablice ostavljen uz uvjet da vrijednost kolone introvertno nepoznate.
 select kratkamajica from ostavljen where introvertno is null;
 
+/*Prikažite narukvica iz tablice mladic, stilfrizura iz tablice sestra te
+gustoca iz tablice prijateljica uz uvjet da su vrijednosti kolone
+introvertno iz tablice ostavljen poznate te da su vrijednosti kolone
+asocijalno iz tablice zarucnik poznate. Podatke posložite po gustoca iz
+tablice prijateljica silazno.*/
+
+# mladic,sestra,prijateljica,ostavljen,zarucnik
+select m.narukvica , s.stilfrizura , p.gustoca 
+from mladic m inner join zarucnik_mladic zm on m.sifra = zm.mladic 
+inner join zarucnik z on z.sifra = zm.zarucnik 
+inner join ostavljen o on o.zarucnik = z.sifra 
+inner join prijateljica p on p.ostavljen = o.sifra 
+inner join sestra s on s.prijateljica = p.sifra 
+where o.introvertno is not null and z.asocijalno is not null;
+
 
 
 
