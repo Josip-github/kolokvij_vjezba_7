@@ -82,6 +82,22 @@ alter table ostavljen add foreign key (zarucnik) references zarucnik(sifra);
 alter table zarucnik_mladic add foreign key (zarucnik) references zarucnik(sifra);
 alter table zarucnik_mladic add foreign key (mladic) references mladic(sifra);
 
+#U tablice prijateljica, ostavljen i zarucnik_mladic unesite po 3 retka.
+insert into zarucnik(asocijalno,narukvica,novcica)
+values(0,1,15.56),(1,2,32.22),(1,4,22.33);
+
+insert into mladic(lipa,narukvica,drugiputa)
+values(44.13,7,'2020-09-08'),(55.13,6,'2021-09-08'),(77.13,9,'2022-09-08');
+
+insert into zarucnik_mladic(zarucnik,mladic)
+values(1,1),(2,2),(3,3);
+
+insert into ostavljen(introvertno,kratkamajica,prstena)
+values(0,'nike',8),(1,'adidas',9),(1,'puma',11);
+
+insert into prijateljica(gustoca)
+values(11.11),(12.12),(13.13);
+
 
 
 
