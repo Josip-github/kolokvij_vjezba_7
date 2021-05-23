@@ -98,6 +98,9 @@ values(0,'nike',8),(1,'adidas',9),(1,'puma',11);
 insert into prijateljica(gustoca)
 values(11.11),(12.12),(13.13);
 
+#U tablici punica postavite svim zapisima kolonu eura na vrijednost 15,77.
+update punica set eura = '15.77';
+
 
 
 
