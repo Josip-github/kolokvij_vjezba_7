@@ -101,6 +101,9 @@ values(11.11),(12.12),(13.13);
 #U tablici punica postavite svim zapisima kolonu eura na vrijednost 15,77.
 update punica set eura = '15.77';
 
+#U tablici sestra obrišite sve zapise čija je vrijednost kolone hlace manje od AB.
+delete from sestra where hlace < 'AB';
+
 
 
 
