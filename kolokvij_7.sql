@@ -124,7 +124,7 @@ where o.introvertno is not null and z.asocijalno is not null;
 
 #Prikažite kolone asocijalno i modelnaocala iz tablice zarucnik čiji se primarni ključ ne nalaze u tablici zarucnik_mladic.
 select z.asocijalno , z.modelnaocala 
-from zarucnik z inner join zarucnik_mladic zm on zm.zarucnik = z.sifra 
+from zarucnik z left join zarucnik_mladic zm on zm.zarucnik = z.sifra 
 where zm.zarucnik is null;
 
 
